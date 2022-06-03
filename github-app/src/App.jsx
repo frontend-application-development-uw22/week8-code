@@ -3,6 +3,7 @@ import GithubUserSearch from './GithubUserSearch';
 import GithubUser from './GithubUser';
 import Navbar from './Navbar';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import NotFound from "./NotFound";
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
           </Route>
           <Route path="/github/search" element={<GithubUserSearch />} />
           <Route path="/github/users/:username" element={<GithubUser />} />
-          <Route path="*" element={<h1>404</h1>} />
+          <Route path="*" element={<NotFound/>} />
         </Routes>
       </Router>
     </div>
