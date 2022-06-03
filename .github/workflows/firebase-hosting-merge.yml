@@ -6,8 +6,6 @@ name: Deploy to Firebase Hosting on merge
   push:
     branches:
       - main
-env:
-  REACT_APP_VERSION: affogato
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
@@ -17,7 +15,7 @@ jobs:
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_GITHUB_APP_B6563 }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_GITHUB_APPLICATION_E4A37 }}'
           channelId: live
-          projectId: github-app-b6563
+          projectId: github-application-e4a37
           entryPoint: ./github-app
